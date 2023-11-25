@@ -16,3 +16,10 @@ echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 
 
 sudo apt update
 sudo apt install nginx
+
+sudo apt-get purge dotnet-sdk-7.0
+sudo rm -f /etc/apt/sources.list.d/microsoft-prod.list && sudo apt update
+sudo apt install -y dotnet7
+dotnet --info
+.NET SDKs installed:
+  7.0.110 [/usr/lib/dotnet/sdk]
